@@ -27,7 +27,6 @@ def naiveTSP(graph):
         if(current_pathweight < min_weight): 
             min_path = [0] + list(i)
             min_weight = current_pathweight
-        min_weight = min(min_weight, current_pathweight)
 
     # output should be 1 based not zero
     min_path = list(map(lambda node: node+1, min_path))
@@ -54,7 +53,7 @@ def main():
     runtime = end - start
     print('\nThe input is a ' + str(len(inputFile)) + ' by ' + str(len(inputFile[0])) + ' Adjecency matrix')
     print('\nOur solution using the naive algorithm is: ' + str(solution))
-    print('Runtime of our algorithm is: ' + str(runtime))
+    print('Runtime of our algorithm is: ' + str(runtime) + ' seconds')
 
 if __name__ == "__main__":
     main()
